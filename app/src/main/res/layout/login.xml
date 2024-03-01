@@ -8,7 +8,7 @@
         android:id="@+id/myTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
+        android:background="@color/purple"
         android:gravity="center"
         android:text="Login"
         android:textColor="@color/white"
@@ -16,43 +16,65 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myTextView"
+        android:layout_marginTop="114dp"
+        android:ems="10"
+        android:hint="Correo Electronico"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:text="¿Necesitas ayuda para iniciar sesión?"
+        android:textColor="@color/purple"
+        android:textSize="16sp"
+        android:layout_below="@id/editTextTextEmailAddress" />
 
-        <EditText
-            android:id="@+id/editTextTextEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Correo Electronico"
-            android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¿Necesitas ayuda para iniciar sesión?"
-            android:textColor="@color/blue"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTextPassword"
+        android:layout_marginTop="3dp"
+        android:text="¿Olvidaste tu contraseña?"
+        android:textColor="@color/purple"
+        android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/editTextTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Contraseña"
-            android:inputType="textPassword" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¿Olvidaste tu contraseña?"
-            android:textColor="@color/blue"
-            android:textSize="16sp" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_centerHorizontal="true"
+            android:text="Iniciar Sesion" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="170dp"
+            android:layout_height="37dp"
+            android:layout_below="@id/button"
+            android:layout_centerHorizontal="true"
+            android:text="Registrate" />
+
+    </RelativeLayout>
+
 </RelativeLayout>

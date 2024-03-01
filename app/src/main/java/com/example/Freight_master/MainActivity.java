@@ -1,4 +1,4 @@
-package com.example.project_login_development;
+package com.example.Freight_master;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import com.example.project_login_development.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         buttonOwner.setOnClickListener(click);
         buttonPrivateUser.setOnClickListener(click);
 
+
     }
 
     OnClickListener click = new OnClickListener() {
@@ -35,16 +38,21 @@ public class MainActivity extends AppCompatActivity {
             LoginPrivateUser();
         }
 
-
     };
+
+
+
 
     private  void LoginDriverTrucker(){
         Intent TruckerButton = new Intent(this,Login.class);
         startActivity(TruckerButton);
+
+
     }
     private  void LoginOwner(){
         Intent OwnerButton = new Intent(this,Login.class);
         startActivity(OwnerButton);
+
     }
     private  void LoginPrivateUser(){
         Intent PrivateUserButton = new Intent(this,Login.class);

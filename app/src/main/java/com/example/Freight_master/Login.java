@@ -1,8 +1,10 @@
-package com.example.project_login_development;
+package com.example.Freight_master;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.project_login_development.R;
 
 public class Login extends AppCompatActivity {
 

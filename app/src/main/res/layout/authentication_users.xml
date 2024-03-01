@@ -1,51 +1,63 @@
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
     <TextView
         android:id="@+id/myTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/black"
+        android:layout_width="428dp"
+        android:layout_height="148dp"
+        android:background="@color/purple"
         android:gravity="center"
-        android:text="Quien eres tu?"
+        android:text="¡Bienvenido!\n¿Quien eres tu?"
         android:textColor="@color/white"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="0dp"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="-9dp"
         tools:layout_editor_absoluteY="0dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
+    <Button
+        android:id="@+id/buttonTruckDrive"
+        android:layout_width="249dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="240dp"
+        android:onClick="LoginTruckDrive"
+        android:text="Camionero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-        <Button
-            android:id="@+id/buttonTruckDrive"
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="LoginTruckDrive"
-            android:text="Camionero" />
+    <Button
+        android:id="@+id/buttonOwner"
+        android:layout_width="249dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="380dp"
+        android:onClick="LoginOwner"
+        android:text="Dueño de flota"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-        <Button
-            android:id="@+id/buttonOwner"
-            android:layout_width="18dp"
-            android:layout_height="88dp"
-            android:layout_weight="1"
-            android:onClick="LoginOwner"
-            android:text="Dueño de flota" />
+    <Button
+        android:id="@+id/buttonPrivateUser"
+        android:layout_width="249dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="516dp"
+        android:onClick="LoginPrivateUser"
+        android:text="Usuario particular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-        <Button
-            android:id="@+id/buttonPrivateUser"
-            android:layout_width="18dp"
-            android:layout_height="88dp"
-            android:layout_weight="1"
-            android:onClick="LoginPrivateUser"
-            android:text="Usuario particular" />
-
-
-    </LinearLayout>
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="92dp"
+        android:layout_height="170dp"
+        app:srcCompat="@drawable/ad"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="545dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
